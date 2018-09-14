@@ -35,6 +35,7 @@ class App extends Component {
       <div>
         <NavBarComponent navBarShrink={nbs} />
         <HeroComponent />
+        <HeroComponent />
       </div>
     );
   }
