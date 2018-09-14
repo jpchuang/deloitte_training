@@ -1,37 +1,27 @@
 import React, { Component } from "react";
 import "./style.css";
-import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
+import { Link } from "react-router-dom";
 
 class NavBarComponent extends Component {
   render() {
     return (
       <nav
-        className={`navbar navbar-expand-lg navbar-light fixed-top ${
-          this.props.navBarShrink
-        }`}
+        className="navbar navbar-expand-lg navbar-light fixed-top"
         id="mainNav"
       >
         <div className="container">
-          <a
-            // onClick={this.scrollToTop.bind(this)}
-            className="navbar-brand js-scroll-trigger"
-            href="#page-top"
-          >
-            Home
-          </a>
-
           <div className="collapse navbar-collapse" id="navbarResponsive">
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav mx-auto">
               <li className="nav-item">
                 <Link
                   activeClass="active"
                   className="nav-link js-scroll-trigger"
-                  to="download"
+                  to="/"
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
                 >
-                  Prijslijst
+                  Behandelingen + Prijs
                 </Link>
               </li>
               <li className="nav-item">
