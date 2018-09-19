@@ -16,7 +16,7 @@ class NavBarComponent extends Component {
                 <Link
                   activeClass="active"
                   className="nav-link js-scroll-trigger"
-                  to="/"
+                  to="features"
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
@@ -28,7 +28,7 @@ class NavBarComponent extends Component {
                 <Link
                   activeClass="active"
                   className="nav-link js-scroll-trigger"
-                  to="features"
+                  to="afspraak"
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
@@ -36,6 +36,19 @@ class NavBarComponent extends Component {
                   Afspraak maken
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  className="nav-link js-scroll-trigger"
+                  to="social"
+                  spy={true}
+                  smooth="easeInOutQuart"
+                  duration={1000}
+                >
+                  Social Media
+                </Link>
+              </li>
+
               <li className="nav-item">
                 <Link
                   activeClass="active"

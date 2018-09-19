@@ -7,6 +7,9 @@ import "font-awesome/css/font-awesome.css";
 import HeroComponent from "./components/HeroComponent/HeroComponent";
 import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
 import Features from "./components/FeaturesComponent/Features";
+import Social from "./components/SocialComponent/Social";
+import Contact from "./components/ContactComponent/Contact";
+import Footer from "./components/FooterComponent/Footer";
 
 class App extends Component {
   render() {
@@ -16,6 +19,9 @@ class App extends Component {
           <NavBarComponent />
           <HeroComponent />
           <Features />
+          <Social />
+          <Contact />
+          <Footer />
         </div>
       </Router>
     );

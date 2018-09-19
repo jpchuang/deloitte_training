@@ -1,0 +1,27 @@
+body.bodylayout {
+  background-color: grey;
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+}
+
+body.bodylayout .column-content {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  body.bodylayout {
+    height: 50vh;
+    min-height: 300px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  body.bodylayout .container {
+    max-width: 2000px;
+  }
+}
