@@ -1,0 +1,17 @@
+footer.footer {
+  background-color: black;
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  footer.footer {
+    height: 5vh;
+    min-height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
