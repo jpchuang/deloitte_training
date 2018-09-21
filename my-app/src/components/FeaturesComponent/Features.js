@@ -8,8 +8,8 @@ import "./style.css";
 
 class Features extends Component {
   state = {
-    Male: true,
-    Female: true
+    Male: false,
+    Female: false
   };
 
   render() {

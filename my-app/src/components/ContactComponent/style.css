@@ -16,8 +16,8 @@ body.contact ul {
   list-style: none;
 }
 
-body.contact row {
-  align-content: center;
+body.contact .row {
+  text-align: center;
 }
 
 @media (min-width: 992px) {

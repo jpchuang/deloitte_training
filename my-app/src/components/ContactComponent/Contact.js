@@ -14,7 +14,7 @@ const Contact = () => {
                   <h1>Openingstijden</h1>
                 </div>
                 <div className="row">
-                  <div className="col col-lg-3">
+                  <div className="col col-lg-5">
                     <ul>
                       <li>Maandag: </li>
                       <li>Dinsdag: </li>
@@ -25,7 +25,7 @@ const Contact = () => {
                       <li>Zondag:</li>
                     </ul>
                   </div>
-                  <div className="col col-lg-9">
+                  <div className="col col-lg-7">
                     <ul>
                       <li>11:00 - 19:00 </li>
                       <li>11:00 - 19:00 </li>
