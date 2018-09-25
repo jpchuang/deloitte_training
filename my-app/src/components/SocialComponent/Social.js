@@ -14,16 +14,16 @@ const Social = () => {
                   <a href="www.facebook.com" class="fa fa-facebook" />
                 </li>
                 <li>
-                  <a href="#" class="fa fa-twitter" />
+                  <a href="www.twitter.com" class="fa fa-twitter" />
                 </li>
                 <li>
-                  <a href="#" class="fa fa-instagram" />
+                  <a href="www.instagram.com" class="fa fa-instagram" />
                 </li>
                 <li>
-                  <a href="#" class="fa fa-youtube" />
+                  <a href="www.youtube.com" class="fa fa-youtube" />
                 </li>
                 <li>
-                  <a href="#" class="fa fa-reddit" />
+                  <a href="www.reddit.com" class="fa fa-reddit" />
                 </li>
               </ul>
             </div>

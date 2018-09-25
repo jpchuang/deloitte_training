@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import {
-  Element,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 class NavBarComponent extends Component {
   constructor(props) {
@@ -15,34 +10,28 @@ class NavBarComponent extends Component {
     this.state = {
       isTop: true
     };
-
-    this.onScroll = this.onTestScroll.bind(this);
+    // Line below binds the prop(this) that is inserted in onScroll to onTestScroll
+    // this.onScroll = this.onTestScroll.bind(this);
   }
 
   componentDidMount() {
     document.addEventListener("scroll", () => {
       const isTop = window.scrollY < 100;
       if (isTop !== this.state.isTop) {
-        this.onScroll(isTop);
+        this.setState({ isTop });
+
+        // this.onScroll(isTop);
       }
     });
   }
 
-  onTestScroll(isTop) {
-    this.setState({ isTop });
-  }
+  // onTestScroll(isTop) {
+  //   this.setState({ isTop });
+  // }
 
-  scrollTo() {
-    scroll.scrollTo(500);
-  }
-
-  scrollTo2() {
-    scroll.scrollTo(1000);
-  }
-
-  scrollTo3() {
-    scroll.scrollTo(1200);
-  }
+  scrollTo = time => {
+    scroll.scrollTo(time);
+  };
 
   render() {
     const { isTop } = this.state;
@@ -66,8 +55,9 @@ class NavBarComponent extends Component {
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
+                  onClick={() => this.scrollTo(500)}
                 >
-                  <a onClick={this.scrollTo}> Behandelingen + Prijs</a>
+                  Behandelingen + Prijs
                 </Link>
               </li>
               <li className="nav-item">
@@ -90,8 +80,9 @@ class NavBarComponent extends Component {
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
+                  onClick={() => this.scrollTo(1000)}
                 >
-                  <a onClick={this.scrollTo2}> Social Media</a>
+                  Social Media
                 </Link>
               </li>
 
@@ -103,8 +94,9 @@ class NavBarComponent extends Component {
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
+                  onClick={() => this.scrollTo(1200)}
                 >
-                  <a onClick={this.scrollTo3}> Contact</a>
+                  Contact
                 </Link>
               </li>
             </ul>
