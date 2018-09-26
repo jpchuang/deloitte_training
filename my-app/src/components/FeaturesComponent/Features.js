@@ -7,10 +7,17 @@ import FemaleComponent from "./GenderOptionComponent/Female";
 import "./style.css";
 
 class Features extends Component {
+  constructor(props) {
+    super(props);
+  }
   state = {
     Male: false,
     Female: false
   };
+
+  downloadFile() {
+    this.props.gender = true;
+  }
 
   render() {
     const { Male, Female } = this.state;
@@ -30,19 +37,26 @@ class Features extends Component {
                       >
                         Male
                       </button>
-                      <Router>{Male ? <MaleComponent /> : null}</Router>
+                      {Male ? <MaleComponent /> : null}
                     </div>
                   </div>
                   <div className="col col-lg-6 my-auto">
                     <div className="column-content mx-auto">
                       <button
+                        // onClick={() => this.downloadFile()}
                         onClick={() => this.setState({ Female: !Female })}
                         type="button"
                         class="btn btn-lg btn-dark btn-block"
                       >
                         Female
                       </button>
-                      <Router>{Female ? <FemaleComponent /> : null}</Router>
+                      {Female ? <FemaleComponent /> : null}
+
+                      {this.props.gender ? (
+                        <MaleComponent />
+                      ) : (
+                        <FemaleComponent />
+                      )}
                     </div>
                   </div>
                 </div>

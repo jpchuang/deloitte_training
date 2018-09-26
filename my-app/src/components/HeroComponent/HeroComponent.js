@@ -7,20 +7,20 @@ export const HeroComponent = props => {
     <header className="masthead">
       <div className="container h-100">
         <div className="row h-100">
-          <div className="col-lg-12 my-auto">
+          <div className="col-lg-12 ">
             <div className="header-content mx-auto">
-              <Fade top>
-                <h1>
-                  Welkom bij <span style={{ color: "#fdcc52" }}>Kapsonses</span>{" "}
-                  kapperzaak
-                </h1>
-                <a
-                  href="appointment"
-                  className="btn btn-secondary btn-outline btn-lg btn-xl js-scroll-trigger"
-                >
-                  Afspraak maken!
-                </a>
-              </Fade>
+              <div className="content-top">
+                <Fade top>
+                  <h1>
+                    <span style={{ color: "black" }}>Hairstudio</span> Kapsones
+                  </h1>
+                </Fade>
+              </div>
+              <div className="content-bottom">
+                <Fade right>
+                  <h4>Your creative hairstudio</h4>
+                </Fade>
+              </div>
             </div>
           </div>
         </div>

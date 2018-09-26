@@ -16,18 +16,12 @@ class NavBarComponent extends Component {
 
   componentDidMount() {
     document.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 100;
+      const isTop = window.scrollY < 70;
       if (isTop !== this.state.isTop) {
         this.setState({ isTop });
-
-        // this.onScroll(isTop);
       }
     });
   }
-
-  // onTestScroll(isTop) {
-  //   this.setState({ isTop });
-  // }
 
   scrollTo = time => {
     scroll.scrollTo(time);
@@ -45,62 +39,63 @@ class NavBarComponent extends Component {
         id="mainNav"
       >
         <div className="container">
-          <div className="collapse navbar-collapse" id="navbarResponsive">
-            <ul className="navbar-nav mx-auto">
-              <li className="nav-item">
-                <Link
-                  activeClass="active"
-                  className="nav-link js-scroll-trigger"
-                  to=""
-                  spy={true}
-                  smooth="easeInOutQuart"
-                  duration={1000}
-                  onClick={() => this.scrollTo(500)}
-                >
-                  Behandelingen + Prijs
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  activeClass="active"
-                  className="nav-link js-scroll-trigger"
-                  to="afspraak"
-                  spy={true}
-                  smooth="easeInOutQuart"
-                  duration={1000}
-                >
-                  Afspraak maken
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  activeClass="active"
-                  className="nav-link js-scroll-trigger"
-                  to=""
-                  spy={true}
-                  smooth="easeInOutQuart"
-                  duration={1000}
-                  onClick={() => this.scrollTo(1000)}
-                >
-                  Social Media
-                </Link>
-              </li>
+          <ul className="navbar-nav menu mx-auto" id="menu">
+            <li
+              id="afspraak"
+              className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-148"
+            >
+              <Link
+                activeClass="active"
+                className="nav-link js-scroll-trigger"
+                to=""
+                spy={true}
+                smooth="easeInOutQuart"
+                duration={1000}
+                onClick={() => this.scrollTo(500)}
+              >
+                Behandelingen + Prijs
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                className="nav-link js-scroll-trigger"
+                to="afspraak"
+                spy={true}
+                smooth="easeInOutQuart"
+                duration={1000}
+              >
+                Afspraak maken
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                className="nav-link js-scroll-trigger"
+                to=""
+                spy={true}
+                smooth="easeInOutQuart"
+                duration={1000}
+                onClick={() => this.scrollTo(1000)}
+              >
+                Social Media
+              </Link>
+            </li>
 
-              <li className="nav-item">
-                <Link
-                  activeClass="active"
-                  className="nav-link js-scroll-trigger"
-                  to=""
-                  spy={true}
-                  smooth="easeInOutQuart"
-                  duration={1000}
-                  onClick={() => this.scrollTo(1200)}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                className="nav-link js-scroll-trigger"
+                to=""
+                spy={true}
+                smooth="easeInOutQuart"
+                duration={1000}
+                onClick={() => this.scrollTo(1200)}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
         </div>
       </nav>
     );
